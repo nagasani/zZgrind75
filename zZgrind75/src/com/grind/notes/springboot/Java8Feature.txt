@@ -1,0 +1,10 @@
+Imp Features of java 8
+1) Lambda Expression
+2) Stream API
+3) Default methods in interface
+4) Static methods
+5) Functional Interface
+6) Optional
+7) Method References
+8) Data API
+9) Nashorn, javaScript Engine.

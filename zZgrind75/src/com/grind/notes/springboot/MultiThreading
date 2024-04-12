@@ -1,0 +1,3 @@
+Use Synchronized user Collections.synchronizee...
+For Example
+--List<String> synchronizedList = Collections.synchronizedList(new ArrayList<>());

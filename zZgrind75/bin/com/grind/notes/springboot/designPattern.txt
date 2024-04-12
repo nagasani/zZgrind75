@@ -1,0 +1,10 @@
+https://www.techrepublic.com/article/java-design-patterns/
+Singleton Design Pattern
+ 
+Solid principal
+ --Single Responsibility - only one task
+ --Open/Closed – Open for extension and closed for modification(Avoid changing existing code; instead, extend it through inheritance or composition when adding new functionality.)
+ --Liskov Substitution - 
+ --Interface Segregation - Avoid changing existing code; instead, extend it through inheritance or composition when adding new functionality.
+ --Dependency Inversion - Use dependency injection and programming to interfaces to decouple components and improve flexibility.
+ 

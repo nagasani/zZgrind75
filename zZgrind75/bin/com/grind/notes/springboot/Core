@@ -1,0 +1,13 @@
+Equals Hashcode Contract
+	1) Both equals must be true and hashcode must be equal.
+	2) hashcode equal doestn't mean both object are equal
+	3) calling hashcode multiple times should return the same value. 
+	
+Why above is important
+ 1) doesn't matter if you don't use them in collections but if you use them in collection then though 
+    both objects might be equal but if they don't have same hashcode then they are treated as separate
+    objects by hashmap and they end up as different elements contrary to what you are trying to achieve.
+    
+ To read text from console
+ Scanner scanner = new Scanner(System.in); scanner.nextLine(); scanner.close();
+ 

@@ -1,0 +1,38 @@
+The N+1 problem is a common performance issue that can occur when using an Object-Relational Mapping (ORM) tool like Hibernate with a relational database. This problem arises when fetching a collection of entities along with their associated relationships, resulting in a large number of individual database queries.
+
+The N+1 problem is named after the number of queries executed to fetch the data. Suppose you have N entities of a particular type, and each entity has a one-to-one or one-to-many relationship with another entity. When you try to fetch these N entities along with their associated relationships, Hibernate may generate N+1 separate queries:
+
+One query to fetch the N main entities.
+N additional queries to fetch the associated relationships for each of the N main entities.
+This can lead to a significant increase in the number of database queries, resulting in reduced performance and increased load on the database.
+
+Here's an example to illustrate the N+1 problem:
+
+Suppose you have a Parent entity that has a one-to-many relationship with a Child entity.
+
+
+class Parent {
+    @OneToMany(mappedBy = "parent", fetch = FetchType.LAZY)
+    private List<Child> children;
+    // other properties and methods
+}
+
+class Child {
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "parent_id")
+    private Parent parent;
+    // other properties and methods
+}
+Now, let's say you want to fetch a list of all Parent entities along with their children. If the fetch type for the children association is set to LAZY (which is a good practice), Hibernate will load the Parent entities first and then, for each Parent entity, it will issue a separate query to fetch its associated children. This leads to the N+1 problem, with one query for Parent entities and N queries for Child entities, where N is the number of Parent entities.
+
+To avoid the N+1 problem, you can use Hibernate's "batch fetching" or "join fetching" techniques. Batch fetching allows you to load multiple entities in a single database query, reducing the number of database round trips. Join fetching allows you to load associated entities using SQL JOINs instead of separate queries.
+
+Here's an example of using batch fetching with Hibernate:
+
+class Parent {
+    @OneToMany(mappedBy = "parent", fetch = FetchType.LAZY)
+    @BatchSize(size = 10) // Batch fetching
+    private List<Child> children;
+    // other properties and methods
+}
+By using batch fetching or join fetching appropriately, you can efficiently retrieve data without encountering the N+1 problem and improve the performance of your Hibernate-based applications.

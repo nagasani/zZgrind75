@@ -1,0 +1,8 @@
+bean is nothing but having private member variables and public getter setters and implements serializable 
+using bean name or bean class we can access bean
+             ______
+            | POJO |       
+            ¯¯¯¯¯¯¯¯
+Spring Container
+ 1) Bean Factory - Basic Spring Container
+ 2) Application Context

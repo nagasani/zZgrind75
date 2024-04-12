@@ -3,7 +3,8 @@ package com.grind.imp;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+//Revisit
+//https://www.youtube.com/watch?v=Sx9NNgInc3A
 class Solution139 
 {
     public static boolean wordBreak(String s, List<String> wordDict) {
@@ -49,6 +50,24 @@ class Solution139
         }
 
         return dp[n];
+    }
+    
+    public boolean wordBreakNeetCode(String s, List<String> wordDict) {
+        int n = s.length();
+        boolean[] dp = new boolean[n + 1];
+        dp[n] = true; // Initialize the last position as true
+
+        for (int i = n - 1; i >= 0; i--) {
+            for (String word : wordDict) {
+                int wordLen = word.length();
+                if (i + wordLen <= n && s.substring(i, i + wordLen).equals(word) && dp[i + wordLen]) {
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+
+        return dp[0];
     }
     
     

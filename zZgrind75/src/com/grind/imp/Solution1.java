@@ -18,6 +18,7 @@ public class Solution1 {
 				return new int[] {i, map.get(target-nums[i])};
 			}
 			map.put(nums[i], i);
+			
 		}
 		return null;
 	}

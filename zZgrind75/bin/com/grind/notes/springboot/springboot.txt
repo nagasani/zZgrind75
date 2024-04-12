@@ -1,0 +1,32 @@
+Spring Boot Features
+1) Auto-Configuration
+2) Started Dependencies
+3) Embedded Server
+4) Metrics and Health Checks
+
+
+@Configuration  --> to inject Spring bean 
+@SrpingBootApplicatoin --> Main Class which is combination following 3
+	@EnableAutoConfiguration -- For Configuration
+	@ComponentScan -- > Scan for current and sub packages
+	@Configuration  --> designates as the configuration class. 
+
+In-Memory Caching - Its Default cache implementation
+Distributed Caching - storing cache data across multiple nodes 
+
+@Autowired - used for automatic dependency injection
+
+Handling Exception
+Global Exception Handling - @ControllerAdvice and @ExceptionHandler
+Custom Exception Handling - YOu can create custom exception classes by extending the Runtime Exception
+Using try-catch block
+
+Profiling Springboot
+Spring Profile (server.active.profile)
+Dev 
+prod
+
+Aspect Oriented Prgramming
+ Aspect
+ point Cut
+ Join point
