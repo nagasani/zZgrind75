@@ -65,7 +65,7 @@ class ReceiverThread extends Thread {
     }
 }
 
-public class Main {
+public class Main4 {
     public static void main(String[] args) {
         Message message = new Message();
 
