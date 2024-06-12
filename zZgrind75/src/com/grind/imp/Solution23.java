@@ -56,8 +56,6 @@ class Solution23 {
                 minHeap.offer(smallest.next);
             }
         }
-
-        return dummyHead.next;
-        
+        return dummyHead.next;        
     }
 }

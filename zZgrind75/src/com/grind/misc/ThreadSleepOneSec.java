@@ -1,10 +1,9 @@
 package com.grind.misc;
 
-public class ThreadSleepOneSec {
-	
+public class ThreadSleepOneSec 
+{	
 	public static void main(String[] args) throws InterruptedException 
 	{
-		
 		while(true) 
 		{
 			Thread.sleep(5);
@@ -13,8 +12,6 @@ public class ThreadSleepOneSec {
 			{
 				System.out.println();
 			}
-		}
-		
+		}	
 	}
-
 }
