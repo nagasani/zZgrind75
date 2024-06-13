@@ -9,6 +9,8 @@ class Solution1235 {
     public int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
         int n = startTime.length;
         
+        Math.max(5, 6);
+        
         // Create an array of jobs, each with start time, end time, and profit.
         Job[] jobs = new Job[n];
         for (int i = 0; i < n; i++) {
